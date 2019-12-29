@@ -20,6 +20,7 @@ int main()
 	}
 	else if(result == 0)
 	{
+		sleep(1);
 		close(pipe_fd[1]);
 		if((r_num = read(pipe_fd[0],buf_r,100))>0)
 			printf("子进程从管道读取%d个字符，读取的字符串是:%s\n",r_num,buf_r);
